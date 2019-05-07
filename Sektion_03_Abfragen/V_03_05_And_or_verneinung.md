@@ -5,15 +5,19 @@
 * Du kannst die Reihenfolge und die Kombination der Bedingungen mit () ändern
 
 ```csharp
-// this if statement checks if a year is a leap year
-// year is divided by 4 without rest
-// not divided by 100
-// or divided by 400
-if(year % 4 == 0 && (year % 100 != 0 || year % 400 == 0))
+int playerScore = 10;
+string playerRace = "orc";
+
+if(playerScore >= 5 && playerScore <= 20 || playerRace == "orc")
 {
-    Console.WriteLine(year + " is a leap year!");
+    Console.WriteLine("get achievement");
 }
 
+// when using () you can change the way a condition is interpreted
+if(playerScore >= 5 && (playerScore <= 20 || playerRace == "orc"))
+{
+    Console.WriteLine("get achievement");
+}
 ```
 
 ### Verneinungsoperator
@@ -25,15 +29,20 @@ if(year % 4 == 0 && (year % 100 != 0 || year % 400 == 0))
 * mit diesem Operator wahr -> falsch und falsch -> wahr
 
 ```csharp
-// we want to check if a year is not a leap year, without changing the code above
-if(!(year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)))
+int playerScore = 10;
+if(playerScore >= 5 && playerScore <= 20)
 {
-    Console.WriteLine(year + " is NOT a leap year!");
+    Console.WriteLine("get achievement");
 }
 
-// another simple example
-if(!isPet)  // this would be true if the value of isPet is false
+// verneinung
+if(!(playerScore >= 5 && playerScore <= 20))
 {
-    Console.WriteLine('Is not a pet')
+    Console.WriteLine("get achievement");
+}
+// statt
+if(playerScore < 5 || playerScore > 20)
+{
+    Console.WriteLine("get achievement");
 }
 ```

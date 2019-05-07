@@ -27,3 +27,36 @@ else    // there is no other options so it has to be red
 
 * es gibt kein perfektes Rezept
 * learning by doing
+
+## Short way of comparing booleans
+
+* anstatt dem herkömmlichen Weg wie man bools vergleicht gibt es auch einen etwas kürzeren Weg
+
+```csharp
+bool isOrc = true;
+
+if(isOrc == true)
+{
+    Console.WriteLine("player is an orc!");
+}
+
+// new way
+if(isOrc)
+{
+    Console.WriteLine("player is an orc!");
+}
+```
+
+```csharp
+bool hasRangeAttack = false;
+
+if(hasRangeAttack == false)
+{
+    Console.WriteLine("player cannot shoot his bow!");
+}
+
+// new way
+if(!hasRangeAttack) {
+    Console.WriteLine("player cannot shoot his bow!")
+}
+```
